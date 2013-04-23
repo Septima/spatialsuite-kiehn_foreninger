@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<datasources>
+    <endpoint endpointtype="database" name="ep_kiehn">
+        <connect>[module.kiehn_foreninger.connect]</connect>
+        <user>[module.kiehn_foreninger.user]</user>
+        <pwd>[module.kiehn_foreninger.pwd]</pwd>
+		<type>odbc</type>
+		<sharedconnection>false</sharedconnection>
+		<debug>false</debug>    
+    </endpoint>
+    <datasource endpoint="ep_kiehn" name="ds_kiehn">
+        <sql command="read-forening">
+		SELECT T_Forening.INDEX_ID, T_Forening.FOREN, T_Forening.AFD, T_Forening.internet, T_Forening.email, T_Adresser.Fornavne, T_Adresser.EfterNavn, T_Adresser.Tlfnr, T_tilknytning.Kode
+		FROM T_Forening INNER JOIN T_Adresser ON T_Forening.INDEX_ID = T_Adresser.INDEX_ID INNER JOIN T_tilknytning ON T_Adresser.intkey = T_tilknytning.intkey
+		WHERE T_Forening.INDEX_ID = [INDEX_ID] AND T_Forening.FORKAT = 5 AND T_tilknytning.Kode = 'FOR' ORDER BY T_Forening.FOREN</sql>
+		<!-- out fra read-forening:
+		<row name="result" pcolid="{2396B056-13E3-60D8-2DD6-52301B0E091F}">
+			<col name="index_id">1001</col>
+			<col name="foren">Andelsboligf. Centerparken</col>
+			<col name="afd"/>
+			<col name="internet"/>
+			<col name="email"/>
+			<col name="fornavne">Andelsboligforeningen Centerparken/Ejendomskontoret</col>
+			<col name="efternavn"/>
+			<col name="tlfnr">43544736</col>
+			<col name="kode">FOR</col>
+		</row>
+		-->
+	</datasource>
+</datasources>

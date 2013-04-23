@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<presentation xmlns:fo="http://www.w3.org/1999/XSL/Format">
+    <text name="overskrift" plural="Grundejerforeninger i Ishøj" value="Grundejerforening i Ishøj"/>
+    <text name="expand" value="true"/>
+    <columns>
+        <column format="heading">
+            <label>'Grundejerforening '+foreningsnavn</label>
+            <value>foren</value>
+        </column>
+         <column name="col1">
+            <label>'Afdeling'</label>
+            <value>afd</value>
+        </column>
+         <column name="col2">
+            <label>'Hjemmeside'</label>
+            <value>internet</value>
+        </column>
+         <column name="col3">
+            <label>'email'</label>
+            <value>email</value>
+        </column>
+         <column name="col4">
+            <label>'Navn'</label>
+            <value>fornavne + ' ' + efternavn</value>
+        </column>
+         <column name="col5">
+            <label>'tlfnr'</label>
+            <value>tlfnr</value>
+        </column>
+         <column format="hyperlink">
+            <label>'Se foreningsoplysninger'</label>
+            <value>link</value>
+        </column>
+        <column format="imageURL">
+            <condition>IsDefinedAndTrue ("hitimages.include")</condition>
+            <label>'hitImage'</label>
+            <value>CreateMapFromGeometry (profile, shape_wkt ,layers, hitimages.imagesize, hitimages.displaybuffer, "", hitimages.dynlayerprefix + '*')</value>
+        </column>
+        <!-- Vis i kort -->
+        <column format="org-pcolid">
+            <label> if IsDefined(shape_wkt) then GeometryType(shape_wkt) else "GEOMETRY UNDEFINED" endif </label>
+            <value>pcolid</value>
+        </column>
+    </columns>
+</presentation>
