@@ -13,14 +13,14 @@ INSTALLATION
 1.a:  kopiér modulet kiehn_foreninger til [cbinfo.config.dir]/modules/septima.
 
 1.b:  Skriv følgende i [cbinfo.modules]:
-
+```xml
     <module name="kiehn_foreninger" dir="septima/kiehn_foreninger"/>
-
+```
 2:    Konfigurér modulet
 
 2.a:  Opret en ODBC Kilde i System DSN med navnet "kiehn" som sql server-datakilde og med informationer fra Kiehn om database.
 
-     Skriv følgende i cbinfo.xml
+Skriv følgende i cbinfo.xml:
 ```xml
     <!-- =================================== -->
     <!-- Kiehn foreninger                    -->
