@@ -2,20 +2,20 @@
 Kiehn_foreninger
 --------------------
 
-Et modul, som indeholder n�dvendige datasource og presentation for at man kan integrere med Kiehn for "Info" og "Hvad g�lder for" for foreninger
+Et modul, som indeholder nødvendige datasource og presentation for at man kan integrere med Kiehn for "Info" og "Hvad gælder for" for foreninger
 
 --------------------
 INSTALLATION
 --------------------
 
-1:    Install�r modulet
-1.a:  kopi�r modulet kiehn_foreninger til [cbinfo.config.dir]/modules/septima.
-1.b:  Skriv f�lgende i [cbinfo.modules]: <module name="kiehn_foreninger" dir="septima/kiehn_foreninger"/>.
+1:    Installér modulet
+1.a:  kopiér modulet kiehn_foreninger til [cbinfo.config.dir]/modules/septima.
+1.b:  Skriv følgende i [cbinfo.modules]: <module name="kiehn_foreninger" dir="septima/kiehn_foreninger"/>.
 
-2:    Konfigur�r modulet
+2:    Konfigurér modulet
 2.a:  Opret en ODBC Kilde i System DSN med navnet "kiehn" som sql server-datakilde og med informationer fra Kiehn om database.
 
-     Skriv f�lgende i cbinfo.xml
+     Skriv følgende i cbinfo.xml
    	<!-- =================================== -->
     <!-- Kiehn foreninger                    -->
     <!-- =================================== -->   
@@ -23,13 +23,13 @@ INSTALLATION
     <param name="module.kiehn_foreninger.user">xxxxx</param>
     <param name="module.kiehn_foreninger.pwd">xxxxx</param>
 
-3:    Eksempel p� anvendelse
+3:    Eksempel på anvendelse
       
-	  Eksisterende targetset �nskes udvidet med information fra Kiehn
+	  Eksisterende targetset ønskes udvidet med information fra Kiehn
 	  
 3.a:  Datasources
 
-	Eksisterende datasource med geometri og ganske f� informationer p� grundejerforeninger:
+	Eksisterende datasource med geometri og ganske få informationer på grundejerforeninger:
 		<datasource endpoint="ep_xxx" name="ds_grundejerf">
 			<table geometrycolumn="wkb_geometry"
 				name="grundejerf" pkcolumn="ogc_fid"/>
