@@ -2,20 +2,20 @@
 Kiehn_foreninger
 --------------------
 
-Et modul, som indeholder nødvendige datasource og presentation for at man kan integrere med Kiehn for "Info" og "Hvad gælder for" for foreninger
+Et modul, som indeholder nï¿½dvendige datasource og presentation for at man kan integrere med Kiehn for "Info" og "Hvad gï¿½lder for" for foreninger
 
 --------------------
 INSTALLATION
 --------------------
 
-1:    Installér modulet
-1.a:  kopiér modulet kiehn_foreninger til [cbinfo.config.dir]/modules/septima.
-1.b:  Skriv følgende i [cbinfo.modules]: <module name="kiehn_foreninger" dir="septima/kiehn_foreninger"/>.
+1:    Installï¿½r modulet
+1.a:  kopiï¿½r modulet kiehn_foreninger til [cbinfo.config.dir]/modules/septima.
+1.b:  Skriv fï¿½lgende i [cbinfo.modules]: <module name="kiehn_foreninger" dir="septima/kiehn_foreninger"/>.
 
-2:    Konfigurér modulet
+2:    Konfigurï¿½r modulet
 2.a:  Opret en ODBC Kilde i System DSN med navnet "kiehn" som sql server-datakilde og med informationer fra Kiehn om database.
 
-     Skriv følgende i cbinfo.xml
+     Skriv fï¿½lgende i cbinfo.xml
    	<!-- =================================== -->
     <!-- Kiehn foreninger                    -->
     <!-- =================================== -->   
@@ -23,13 +23,13 @@ INSTALLATION
     <param name="module.kiehn_foreninger.user">xxxxx</param>
     <param name="module.kiehn_foreninger.pwd">xxxxx</param>
 
-3:    Eksempel på anvendelse
+3:    Eksempel pï¿½ anvendelse
       
-	  Eksisterende targetset ønskes udvidet med information fra Kiehn
+	  Eksisterende targetset ï¿½nskes udvidet med information fra Kiehn
 	  
 3.a:  Datasources
 
-	Eksisterende datasource med geometri og ganske få informationer på grundejerforeninger:
+	Eksisterende datasource med geometri og ganske fï¿½ informationer pï¿½ grundejerforeninger:
 		<datasource endpoint="ep_xxx" name="ds_grundejerf">
 			<table geometrycolumn="wkb_geometry"
 				name="grundejerf" pkcolumn="ogc_fid"/>
@@ -41,7 +41,7 @@ INSTALLATION
         <table geometrycolumn="wkb_geometry"
             name="grundejerf" pkcolumn="ogc_fid"/>
 		<join datasource="ds_kiehn" command="read-forening">
-		   <key name="INDEX_ID">undex_id</key>
+		   <key name="INDEX_ID">index_id</key>
 		</join> 
 	</datasource>
 
