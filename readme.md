@@ -9,7 +9,9 @@ INSTALLATION
 --------------------
 
 1:    Installér modulet
+
 1.a:  kopiér modulet kiehn_foreninger til [cbinfo.config.dir]/modules/septima.
+
 1.b:  Skriv følgende i [cbinfo.modules]: <module name="kiehn_foreninger" dir="septima/kiehn_foreninger"/>.
 
 2:    Konfigurér modulet
