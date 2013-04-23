@@ -14,7 +14,7 @@ INSTALLATION
 
 1.b:  Skriv følgende i [cbinfo.modules]:
 
-<module name="kiehn_foreninger" dir="septima/kiehn_foreninger"/>.
+<module name="kiehn_foreninger" dir="septima/kiehn_foreninger"/>
 
 2:    Konfigurér modulet
 
