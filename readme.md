@@ -21,13 +21,14 @@ INSTALLATION
 2.a:  Opret en ODBC Kilde i System DSN med navnet "kiehn" som sql server-datakilde og med informationer fra Kiehn om database.
 
      Skriv følgende i cbinfo.xml
+```xml
     <!-- =================================== -->
     <!-- Kiehn foreninger                    -->
     <!-- =================================== -->   
     <param name="module.kiehn_foreninger.connect">kiehn</param>
     <param name="module.kiehn_foreninger.user">xxxxx</param>
     <param name="module.kiehn_foreninger.pwd">xxxxx</param>
-
+```
 3:    Eksempel på anvendelse
       
    Eksisterende targetset ønskes udvidet med information fra Kiehn
@@ -35,13 +36,15 @@ INSTALLATION
 3.a:  Datasources
 
 	Eksisterende datasource med geometri og ganske få informationer på grundejerforeninger:
+```xml
 		<datasource endpoint="ep_xxx" name="ds_grundejerf">
 			<table geometrycolumn="wkb_geometry"
 				name="grundejerf" pkcolumn="ogc_fid"/>
 		</datasource>
-	
+```
 	Der oprettes ny datasource, som joiner lokale grundejerforeninger med Kiehn
 	OBS: den gamle bevaredes aht til brug i tema
+```xml
     <datasource endpoint="ep_xxx" name="ds_grundejerf_join_kiehn">
         <table geometrycolumn="wkb_geometry"
             name="grundejerf" pkcolumn="ogc_fid"/>
@@ -49,11 +52,11 @@ INSTALLATION
 		   <key name="INDEX_ID">index_id</key>
 		</join> 
 	</datasource>
-
+```
 3.b:  Targetset
 		
 		Det eksisterende target udskiftedes med nyt som anvender den nye datasource, samt den presentation, der distribueres i modulet
-	
+```xml
 		<!-- ***** grundejerforeninger *** -->
 		<!-- udkommenteret af kpc (Septima). Ertstattet med integration med Kiehn
 		<target themecondition="theme-grundejerf" displayname="Grundejerforeninger" maxresult="100" name="grundejerf" presentation="custom/pres-grundejerf">
@@ -66,4 +69,4 @@ INSTALLATION
 			<datasource name="ds_grundejerf_join_kiehn" />
 		</target>
 		
-
+```
