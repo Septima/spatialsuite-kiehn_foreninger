@@ -14,7 +14,7 @@ INSTALLATION
 
 1.b:  Skriv følgende i [cbinfo.modules]:
 
-<module name="kiehn_foreninger" dir="septima/kiehn_foreninger"/>
+    <module name="kiehn_foreninger" dir="septima/kiehn_foreninger"/>
 
 2:    Konfigurér modulet
 
@@ -30,7 +30,7 @@ INSTALLATION
 
 3:    Eksempel på anvendelse
       
-	  Eksisterende targetset ønskes udvidet med information fra Kiehn
+   Eksisterende targetset ønskes udvidet med information fra Kiehn
 	  
 3.a:  Datasources
 
