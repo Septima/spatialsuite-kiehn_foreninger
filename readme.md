@@ -29,7 +29,7 @@ Ishøj Kommune har finasieret 1 udgave af dette modul
 
 1:    Installér modulet
 
-1.a:  kopiér modulet kiehn_foreninger til [cbinfo.config.dir]/modules/septima.
+1.a:  kopiér modulet til [cbinfo.config.dir]/modules/septima/kiehn_foreninger.
 
 1.b:  Skriv følgende i [cbinfo.modules]:
 ```xml
