@@ -23,6 +23,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 Et modul, som indeholder nødvendige datasource og presentation for at man kan integrere med Kiehn for "Info" og "Hvad gælder for" for foreninger
 
+Ishøj Kommune har finasieret 1 udgave af dette modul
+
 #Installation
 
 1:    Installér modulet
