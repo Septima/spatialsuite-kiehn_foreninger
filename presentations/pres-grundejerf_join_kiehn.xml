@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <presentation xmlns:fo="http://www.w3.org/1999/XSL/Format">
-    <text name="overskrift" plural="Grundejerforeninger i Ishøj" value="Grundejerforening i Ishøj"/>
+    <text name="overskrift" plural="Grundejerforeninger i Ishï¿½j" value="Grundejerforening i Ishï¿½j"/>
     <text name="expand" value="true"/>
     <columns>
         <column format="heading">
-            <label>'Grundejerforening '+foreningsnavn</label>
+            <label>'Grundejerforening '+foren</label>
             <value>foren</value>
         </column>
          <column name="col1">
